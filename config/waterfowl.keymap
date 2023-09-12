@@ -25,6 +25,8 @@
 #define   FNCTS         3
 #define   EXTRAS        4
 
+
+/*
 / {
     macros {
         CTL_RGT: CTL_RGT {
@@ -50,6 +52,10 @@
         };
     };
 };
+
+
+*/
+
 
 / {
     keymap {
@@ -124,7 +130,7 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &trans      &kp CTL_LFT   &kp UP      &kp CTL_RGT   &trans                  &kp FSLH    &kp N7  &kp N8      &kp N9      &kp MINUS
+    &trans      &kp LC(LEFT)   &kp UP      &kp LC(RIGHT)   &trans                  &kp FSLH    &kp N7  &kp N8      &kp N9      &kp MINUS
     &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END                 &kp EQUAL   &kp N4  &kp N5      &kp N6      &kp PLUS
     &trans      &trans      &kp INS     &trans      &trans                  &kp N0      &kp N1  &kp N2      &kp N3      &kp ASTERISK
     &kp N1      &lt 3 DEL   &lt 1 SPACE &kp TAB     &kp N2                  &kp N3      &kp ESC &kp BSPC    &lt 2 RET   &kp N4
