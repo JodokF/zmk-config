@@ -8,6 +8,25 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/*
+0. Layer: _NEOBASE 		// Base Layer mit NEO
+1. Layer: _SYMBOLES 	// Symbole
+2. Layer: _NAV_NUM 		// Navigation & Number Blocks
+3. Layer: _FNCTS        // FN Keys & Mouse Keys
+4. Layer: _EXTRAS       // Extra Symbols and Keys 
+
+*/
+
+
+
+#define   NEO           0 
+#define   SYMBOLS       1
+#define   NAV_NUM       2
+#define   FNCTS         3
+#define   EXTRAS        4
+
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -27,16 +46,46 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &kp ESC     &kp V       &kp L       &kp C       &kp W           &kp K   &kp H       &kp G       &kp F       &kp Y
-    &kp U       &kp I       &kp A       &kp E       &kp O           &kp S   &kp N       &kp R       &kp T       &kp D
-    &kp LBKT    &kp SEMI    &kp APOS    &kp P       &kp Z           &kp B   &kp M       &kp COMMA   &kp DOT     &kp FSLH
-    &kp N1      &lt 3 DEL   &lt 1 BSPC  &kp TAB     &kp N2          &kp N3  &kp ESC     &kp SPACE   &lt 2 RET   &kp N4
+    &kp ESC     &kp V       &kp L       &kp C       &kp W           &kp K   &kp H               &kp G       &kp F       &kp Y
+    &kp U       &kp I       &kp A       &kp E       &kp O           &kp S   &kp N               &kp R       &kp T       &kp D
+    &kp LBKT    &kp SEMI    &kp APOS    &kp P       &kp Z           &kp B   &kp M               &kp COMMA   &kp DOT     &kp FSLH
+    &none      &mt LCTRL DEL   &lt NAV_NUM BSPC  &mt LSHFT TAB     &none          &none  &mt RSHFT ENTER   &lt SYMBOLS SPACE   &lt 2 RET   &none
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
         };
 
-        navnum_layer {
+
+        SYMBOLS {
+/* SYM
+ *
+ * ,----------------------------------.                      ,----------------------------------.
+ * |   %  |   @  |   [  |   ]  |   \  |                      |      |      |   ^  |      |      |
+ * |------+------+------+------+------|                      |------+------+------+------+------|
+ * |   #  |   !  |   (  |   )  |   |  |                      |   _  |   '  |   "  |   ~  |   `  |
+ * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
+ * |   $  |      |   {  |   }  |   &  |  |  2  |    |  3  |  |      |      |      |      |      |
+ * `----------------------------------'  `-----'    `-----'  `----------------------------------'
+ *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
+ *          |  1  |   | DEL | SPACE | TAB  |            |  ESC  | BS | ENTER |   |  4  |
+ *          `-----'   `--------------------'            `--------------------'   `-----'
+ */
+            bindings = <
+    &kp PRCNT       &kp AT      &kp LBKT    &kp RBKT    &kp NON_US_BSLH         &trans          &trans          &kp CARET           &trans      &trans
+    &kp HASH        &kp EXCL    &kp LPAR    &kp RPAR    &kp PIPE                &kp UNDER       &kp APOS        &kp DOUBLE_QUOTES   &kp TILDE   &kp GRAVE
+    &kp DLLR        &trans      &kp LBRC    &kp RBRC    &kp AMPS                &trans          &trans          &trans              &trans      &trans
+    &kp N1          &lt 3 DEL   &lt 1 SPACE &kp TAB     &kp N2                  &kp N3          &kp ESC         &kp BSPC            &lt 2 RET   &kp N4
+            >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
+        };
+
+
+
+
+
+
+        NAV_NUM {
 /* NAVNUM
  *
  * ,----------------------------------.                      ,----------------------------------.
@@ -60,29 +109,11 @@
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
         };
 
-        symbol_layer {
-/* SYM
- *
- * ,----------------------------------.                      ,----------------------------------.
- * |   %  |   @  |   [  |   ]  |   \  |                      |      |      |   ^  |      |      |
- * |------+------+------+------+------|                      |------+------+------+------+------|
- * |   #  |   !  |   (  |   )  |   |  |                      |   _  |   '  |   "  |   ~  |   `  |
- * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
- * |   $  |      |   {  |   }  |   &  |  |  2  |    |  3  |  |      |      |      |      |      |
- * `----------------------------------'  `-----'    `-----'  `----------------------------------'
- *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
- *          |  1  |   | DEL | SPACE | TAB  |            |  ESC  | BS | ENTER |   |  4  |
- *          `-----'   `--------------------'            `--------------------'   `-----'
- */
-            bindings = <
-    &kp PRCNT       &kp AT      &kp LBKT    &kp RBKT    &kp NON_US_BSLH         &trans          &trans          &kp CARET           &trans      &trans
-    &kp HASH        &kp EXCL    &kp LPAR    &kp RPAR    &kp PIPE                &kp UNDER       &kp APOS        &kp DOUBLE_QUOTES   &kp TILDE   &kp GRAVE
-    &kp DLLR        &trans      &kp LBRC    &kp RBRC    &kp AMPS                &trans          &trans          &trans              &trans      &trans
-    &kp N1          &lt 3 DEL   &lt 1 SPACE &kp TAB     &kp N2                  &kp N3          &kp ESC         &kp BSPC            &lt 2 RET   &kp N4
-            >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
-        };
+
+
+
+
 
         function_layer {
 /* FUNC
