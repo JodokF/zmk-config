@@ -34,7 +34,7 @@
                         bindings
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp RIGHT>
-                        , <&macro_release &kp LCTR>
+                        , <&macro_release &kp LCTRL>
                         ;
         };
 
