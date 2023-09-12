@@ -26,7 +26,7 @@
 #define   EXTRAS        4
 
 
-/*
+
 / {
     macros {
         CTL_RGT: CTL_RGT {
@@ -50,11 +50,23 @@
                         , <&macro_release &kp LCTRL>
                         ;
         };
+
+        EURO: EURO {
+                label = "EURO";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp N0 &kp N1 &kp N2 &kp N8>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
     };
 };
 
 
-*/
+
 
 
 / {
@@ -104,15 +116,16 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &kp LA(E)       &kp QMARK      &kp LA(N8)    &kp LA(N9)    &kp GRAVE         &kp EXCL       &kp BSLH        &kp PIPE2           &kp RPAR      &kp CARET
+    &EURO       &kp QMARK      &kp LA(N8)    &kp LA(N9)    &kp GRAVE         &kp EXCL       &kp BSLH        &kp PIPE2           &kp RPAR      &kp CARET
     &kp HASH        &kp EXCL    &kp LPAR    &kp RPAR    &kp PIPE                &kp UNDER       &kp APOS        &kp DOUBLE_QUOTES   &kp TILDE   &kp GRAVE
-    &kp DLLR        &trans      &kp LBRC    &kp RBRC    &kp AMPS                &trans          &trans          &trans              &trans      &trans
+    &kp DLLR        &kp BSLh    &kp LBRC    &kp RBRC    &kp AMPS                &trans          &trans          &trans              &trans      &trans
     &kp N1          &kp LC(DEL)   &kp LC(BSPC) &kp LC(BSPC)     &kp AT                  &kp N3          &kp ESC         &kp BSPC            &lt 2 RET   &kp N4
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
         };
 
+// \/{}* §!)='
 
 
 
