@@ -88,7 +88,7 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &kp ESC     &kp V       &kp L       &kp C       &kp W           &kp K   &kp H               &kp G       &kp F       &kp Z
+    &kp ESC     &kp V       &kp L       &mt LALT C  &kp W           &kp K   &kp H               &kp G       &kp F       &kp Z
     &lt FNCTS U &kp I       &kp A       &kp E       &kp O           &kp S   &kp N               &kp R       &kp T       &lt FNCTS D
     &kp LBKT    &kp SEMI    &kp APOS    &kp P       &kp Y           &kp B   &kp M               &kp COMMA   &kp DOT     &kp J
     &none      &mt LCTRL DEL   &lt NAV_NUM BSPC  &mt LSHFT TAB     &none          &none  &mt RSHFT ENTER   &lt SYMBOLS SPACE   &lt EXTRAS RGUI   &none
@@ -105,27 +105,27 @@
 /* SYM
  *
  * ,----------------------------------.                      ,----------------------------------.
- * |   %  |   @  |   [  |   ]  |   \  |                      |      |      |   ^  |      |      |
+ * |   €  |   _  |   [  |   ]  |   ^  |                      |   !  |   <  |   >  |   =  |   &  |
  * |------+------+------+------+------|                      |------+------+------+------+------|
- * |   #  |   !  |   (  |   )  |   |  |                      |   _  |   '  |   "  |   ~  |   `  |
+ * |   \  |   /  |   {  |   }  |   *  |                      |   ?  |   (  |   )  |   -  |   :  |
  * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
- * |   $  |      |   {  |   }  |   &  |  |  2  |    |  3  |  |      |      |      |      |      |
+ * |   #  |   $  |   |  |   ~  |   ´  |  |     |    |     |  |   +  |   %  |   "  |   '  |   ;  |
  * `----------------------------------'  `-----'    `-----'  `----------------------------------'
  *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
- *          |  1  |   | DEL | SPACE | TAB  |            |  ESC  | BS | ENTER |   |  4  |
+ *          |     |   |     |       |      |            |       |    |       |   |     |
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &EURO           &kp QMARK   &kp LA(N8)    &kp LA(N9) &kp GRAVE              &kp EXCL        &kp BSLH        &kp PIPE2           &kp RPAR      &kp CARET
-    &kp HASH        &kp EXCL    &kp LPAR    &kp RPAR    &kp PIPE                &kp UNDER       &kp APOS        &kp DOUBLE_QUOTES   &kp TILDE   &kp GRAVE
-    &kp DLLR        &kp BSLH    &kp LBRC    &kp RBRC    &kp AMPS                &trans          &trans          &trans              &trans      &trans
-    &kp N1          &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC) &kp AT                &kp N3          &kp ESC         &kp BSPC            &lt 2 RET   &kp N4
+    &EURO           &kp QMARK   &trans      &trans      &kp GRAVE               &kp EXCL        &kp BSLH        &kp PIPE2           &kp RPAR    &kp CARET
+    &trans          &kp AMPS    &trans      &trans      &kp RBRC                &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
+    &kp NUBS        &kp BSLH    &trans      &trans      &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT              &kp PIPE    &kp LT
+    &trans          &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC) &trans                &trans          &trans          &trans              &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
         };
 
-// \/{}* §!)='
+
 
 
 
@@ -146,10 +146,10 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &trans      &kp LC(LEFT) &kp UP     &kp LC(RIGHT)   &trans              &kp FSLH    &kp N7  &kp N8      &kp N9      &kp MINUS
-    &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END                 &kp EQUAL   &kp N4  &kp N5      &kp N6      &kp PLUS
-    &trans      &kp HOME    &kp INS     &kp END      &trans                 &kp N0      &kp N1  &kp N2      &kp N3      &kp ASTERISK
-    &trans      &lt 3 DEL   &lt 1 SPACE &kp TAB     &kp N2                  &kp N3      &kp ESC &kp BSPC    &kp RC(N0)   &kp N4
+    &trans      &kp LC(LEFT) &kp UP      &kp LC(RIGHT) &trans              &trans    &kp N7  &kp N8      &kp N9      &trans
+    &trans      &kp LEFT     &kp DOWN    &kp RIGHT     &trans              &trans    &kp N4  &kp N5      &kp N6      &trans
+    &trans      &kp HOME     &trans      &kp END       &trans              &trans    &kp N1  &kp N2      &kp N3      &trans
+    &trans      &trans       &trans      &trans        &trans              &trans    &trans  &trans     &mt RCTRL N0 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
