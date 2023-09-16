@@ -348,7 +348,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &none           &none           &none           &none           &none               &none       &none       &none       &none 
+    &none           &none           &none           &none           &none               &none       &none       &none       &none       &none
     &kp X           &none           &none           &none           &none               &none       &none       &none       &none       &kp Q
     &none           &none           &none           &none           &none               &none       &none       &none       &none       &kp MINUS // MINUS = ß
     &none           &none           &none           &none           &none               &none       &none       &none       &none       &none 
