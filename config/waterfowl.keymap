@@ -29,28 +29,6 @@
 
 / {
     macros {
-        CTL_RGT: CTL_RGT {
-                label = "CTL_RGT";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                        bindings
-                        = <&macro_press &kp LCTRL>
-                        , <&macro_tap &kp RIGHT>
-                        , <&macro_release &kp LCTRL>
-                        ;
-        };
-
-        CTL_LFT: CTL_LFT {
-                label = "CTL_LFT";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                        = <&macro_press &kp LCTRL>
-                        , <&macro_tap &kp LEFT>
-                        , <&macro_release &kp LCTRL>
-                        ;
-        };
-
         EURO: EURO {
                 label = "EURO";
                 compatible = "zmk,behavior-macro";
@@ -60,6 +38,83 @@
                         , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>
                         , <&macro_release &kp LALT>
                         ;
+        };
+        
+        SQBRCT_OP: SQBRCT_OP {
+        label = "SQBRCT_OP";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N1>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        
+        SQBRCT_CL: SQBRCT_CL {
+        label = "SQBRCT_CL";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        CRBRCT_OP: CRBRCT_OP {
+        label = "CRBRCT_OP";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        
+        CRBRCT_CL: CRBRCT_CL {
+        label = "CRBRCT_CL";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        BKSLASH: BKSLASH {
+        label = "BKSLASH";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N2>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        PIPE: PIPE {
+        label = "PIPE";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        
+        TILDE: TILDE {
+        label = "TILDE";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
         };
 
     };
@@ -98,7 +153,8 @@
         };
 
 
-
+// ┌ └ ┐ ┘ ├ ┤ ┬ ┴ ┼ ─ │
+// ┏ ┗ ┓ ┛ ┣ ┫ ┳ ┻ ╋ ━ ┃
 
 
         SYMBOLS {
@@ -116,10 +172,10 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &EURO           &kp QMARK   &trans      &trans      &kp GRAVE               &kp EXCL        &kp BSLH        &kp PIPE2           &kp RPAR    &kp CARET
-    &trans          &kp AMPS    &trans      &trans      &kp RBRC                &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
-    &kp NUBS        &kp BSLH    &trans      &trans      &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT              &kp PIPE    &kp LT
-    &trans          &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC) &trans                &trans          &trans          &trans              &trans      &trans
+    &EURO           &kp QMARK   &SQBRCT_OP  &SQBRCT_CL &kp GRAVE               &kp EXCL        &kp BSLH        &kp PIPE2           &kp RPAR    &kp CARET
+    &BKSLASH        &kp AMPS    &CRBRCT_OP  &CRBRCT_CL &kp RBRC                &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
+    &kp BSLH        &kp DLLR    &PIPE       &TILDE     &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT              &kp PIPE    &kp LT
+    &none           &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC) &none                 &none           &none           &none               &none       &none 
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
@@ -146,10 +202,10 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &trans      &kp LC(LEFT) &kp UP      &kp LC(RIGHT) &trans              &trans    &kp N7  &kp N8      &kp N9      &trans
-    &trans      &kp LEFT     &kp DOWN    &kp RIGHT     &trans              &trans    &kp N4  &kp N5      &kp N6      &trans
-    &trans      &kp HOME     &trans      &kp END       &trans              &trans    &kp N1  &kp N2      &kp N3      &trans
-    &trans      &trans       &trans      &trans        &trans              &trans    &trans  &trans     &mt RCTRL N0 &trans
+    &none       &kp LC(LEFT) &kp UP      &kp LC(RIGHT) &none               &none     &kp N7  &kp N8      &kp N9      &none 
+    &none       &kp LEFT     &kp DOWN    &kp RIGHT     &none               &none     &kp N4  &kp N5      &kp N6      &none 
+    &none       &kp HOME     &none       &kp END       &none               &none     &kp N1  &kp N2      &kp N3      &none 
+    &none       &none        &none       &none         &none              &none     &none   &none      &mt RCTRL N0 &none 
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
@@ -176,10 +232,10 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &trans          &trans          &bt BT_CLR      &trans          &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F11
-    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4        &trans      &kp F4  &kp F5      &kp F6      &kp F12
-    &trans          &trans          &trans          &trans          &trans              &kp F10     &kp F1  &kp F2      &kp F3      &kp F13
-    &trans          &trans          &trans          &trans          &trans              &trans      &trans  &trans      &trans      &trans
+    &none           &none           &none           &none           &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F10
+    &none           &none           &none           &none           &none               &none       &kp F4  &kp F5      &kp F6      &kp F11
+    &none           &none           &none           &none           &none               &kp F13     &kp F1  &kp F2      &kp F3      &kp F12
+    &none           &none           &none           &none           &none               &none       &none   &none       &none       &none 
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
@@ -202,10 +258,10 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &trans          &trans          &bt BT_CLR      &trans          &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F11
-    &kp X           &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4        &trans      &kp F4  &kp F5      &kp F6      &kp Q
-    &trans          &trans          &trans          &trans          &trans              &kp F10     &kp F1  &kp F2      &kp F3      &kp MINUS
-    &kp N1          &lt 3 DEL       &lt 1 SPACE     &kp TAB         &kp N2              &kp N3      &kp ESC &kp BSPC    &lt 2 RET   &kp N4
+    &none           &none           &none           &none           &none               &none       &none       &none       &none 
+    &kp X           &none           &none           &none           &none               &none       &none       &none       &none       &kp Q
+    &none           &none           &none           &none           &none               &none       &none       &none       &none       &kp MINUS // MINUS = ß
+    &none           &none           &none           &none           &none               &none       &none       &none       &none       &none 
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
