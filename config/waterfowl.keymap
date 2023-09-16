@@ -135,6 +135,66 @@
     };
 };
 
+/*
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LSFT_T(KC_TAB):
+            return TAPPING_TERM - 42;
+        case LALT_T(DE_C):
+            return TAPPING_TERM + 33;
+        case RALT_T(DE_H):
+            return TAPPING_TERM + 33;
+        case LSFT_T(DE_UDIA):
+            return TAPPING_TERM + 33;
+        case TD(X_GUI):
+            return TAPPING_TERM + 35;
+        case LT(_SYMBOLS,KC_SPC):
+            return TAPPING_TERM - 55;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
+*/
+// tapping term:
+/*
+/ {
+    behaviors {
+        gqt: global-quick-tap {
+                compatible = "zmk,behavior-hold-tap";
+                label = "GLOBAL_QUICK_TAP";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <125>;
+                global-quick-tap;
+                bindings = <&kp>, <&kp>;
+        };
+
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
+    };
+};
+*/
+
+
+
+
+&mt {
+    tapping-term-ms = <233>;
+};
+&lt {
+    tapping-term-ms = <180>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
