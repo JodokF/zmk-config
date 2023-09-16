@@ -64,7 +64,7 @@
         };
 
 
-        /*
+        
         CRBRCT_OP: CRBRCT_OP {
                 label = "CRBRCT_OP";
                 compatible = "zmk,behavior-macro";
@@ -86,7 +86,7 @@
                         , <&macro_release &kp LALT>
                         ;
         };
-
+        /*
         BKSLASH: BKSLASH {
                 label = "BKSLASH";
                 compatible = "zmk,behavior-macro";
@@ -178,7 +178,7 @@
  */
             bindings = <
     &EURO           &kp QMARK   &SQBRCT_OP  &SQBRCT_CL &kp GRAVE               &kp EXCL        &kp BSLH        &kp PIPE2           &kp RPAR    &kp CARET
-    &none           &kp AMPS    &none  &none &kp RBRC                   &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
+    &none           &kp AMPS    &CRBRCT_OP  &CRBRCT_CL &kp RBRC                   &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
     &kp BSLH        &kp DLLR    &none       &none     &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT              &kp PIPE    &kp LT
     &none           &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC) &none                 &none           &none           &none               &none       &none 
             >;
