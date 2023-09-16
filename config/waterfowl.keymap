@@ -41,80 +41,80 @@
         };
         
         SQBRCT_OP: SQBRCT_OP {
-        label = "SQBRCT_OP";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N9 &kp KP_N1>
-                , <&macro_release &kp LALT>
-                ;
+                label = "SQBRCT_OP";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N9 &kp KP_N1>
+                        , <&macro_release &kp LALT>
+                        ;
         };
         
         SQBRCT_CL: SQBRCT_CL {
-        label = "SQBRCT_CL";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N9 &kp KP_N3>
-                , <&macro_release &kp LALT>
-                ;
+                label = "SQBRCT_CL";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N9 &kp KP_N3>
+                        , <&macro_release &kp LALT>
+                        ;
         };
 
         CRBRCT_OP: CRBRCT_OP {
-        label = "CRBRCT_OP";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
-                , <&macro_release &kp LALT>
-                ;
+                label = "CRBRCT_OP";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
+                        , <&macro_release &kp LALT>
+                        ;
         };
         
         CRBRCT_CL: CRBRCT_CL {
-        label = "CRBRCT_CL";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
-                , <&macro_release &kp LALT>
-                ;
+                label = "CRBRCT_CL";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
+                        , <&macro_release &kp LALT>
+                        ;
         };
 
         BKSLASH: BKSLASH {
-        label = "BKSLASH";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N9 &kp KP_N2>
-                , <&macro_release &kp LALT>
-                ;
+                label = "BKSLASH";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N9 &kp KP_N2>
+                        , <&macro_release &kp LALT>
+                        ;
         };
 
         PIPE: PIPE {
-        label = "PIPE";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
-                , <&macro_release &kp LALT>
-                ;
+                label = "PIPE";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
+                        , <&macro_release &kp LALT>
+                        ;
         };
         
         TILDE: TILDE {
-        label = "TILDE";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
-                , <&macro_release &kp LALT>
-                ;
+                label = "TILDE";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
+                        , <&macro_release &kp LALT>
+                        ;
         };
 
     };
