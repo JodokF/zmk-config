@@ -29,6 +29,7 @@
 
 / {
     macros {
+
         EURO: EURO {
                 label = "EURO";
                 compatible = "zmk,behavior-macro";
@@ -62,6 +63,8 @@
                         ;
         };
 
+
+        /*
         CRBRCT_OP: CRBRCT_OP {
                 label = "CRBRCT_OP";
                 compatible = "zmk,behavior-macro";
@@ -116,6 +119,8 @@
                         , <&macro_release &kp LALT>
                         ;
         };
+
+        */
 
     };
 };
