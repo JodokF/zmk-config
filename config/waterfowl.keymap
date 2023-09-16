@@ -182,7 +182,7 @@
     &none       &mt LCTRL DEL   &lt NAV_NUM BSPC  &mt LSHFT TAB   &none           &none   &mt RSHFT ENTER     &lt SYMBOLS SPACE   &lt EXTRAS RGUI   &none
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
 
