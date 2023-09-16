@@ -120,7 +120,17 @@
                         ;
         };
 
-        
+        AAAT: AAAT {
+                label = "AAAT";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N6 &kp KP_N4>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
 
     };
 };
@@ -148,18 +158,15 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &kp ESC     &kp V       &kp L       &mt LALT C  &kp W           &kp K   &kp H               &kp G       &kp F       &kp Z
-    &lt FNCTS U &kp I       &kp A       &kp E       &kp O           &kp S   &kp N               &kp R       &kp T       &lt FNCTS D
-    &kp LBKT    &kp SEMI    &kp APOS    &kp P       &kp Y           &kp B   &kp M               &kp COMMA   &kp DOT     &kp J
-    &none      &mt LCTRL DEL   &lt NAV_NUM BSPC  &mt LSHFT TAB     &none          &none  &mt RSHFT ENTER   &lt SYMBOLS SPACE   &lt EXTRAS RGUI   &none
+    &kp ESC     &kp V           &kp L             &mt LALT C      &kp W           &kp K   &kp H               &kp G               &kp F             &kp Z
+    &lt FNCTS U &kp I           &kp A             &kp E           &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
+    &kp LBKT    &kp SEMI        &kp APOS          &kp P           &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
+    &none       &mt LCTRL DEL   &lt NAV_NUM BSPC  &mt LSHFT TAB   &none           &none   &mt RSHFT ENTER     &lt SYMBOLS SPACE   &lt EXTRAS RGUI   &none
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
         };
 
-
-// ┌ └ ┐ ┘ ├ ┤ ┬ ┴ ┼ ─ │
-// ┏ ┗ ┓ ┛ ┣ ┫ ┳ ┻ ╋ ━ ┃
 
 
         SYMBOLS {
@@ -177,10 +184,10 @@
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &EURO           &kp QMARK   &SQBRCT_OP  &SQBRCT_CL &kp GRAVE               &kp EXCL        &kp BSLH        &kp PIPE2           &kp RPAR    &kp CARET
-    &BKSLASH        &kp AMPS    &CRBRCT_OP  &CRBRCT_CL &kp RBRC                 &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
-    &kp BSLH        &kp DLLR    &PIIIPE     &TIIILDE   &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT              &kp PIPE    &kp LT
-    &none           &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC) &none                 &none           &none           &none               &none       &none 
+    &EURO       &kp QMARK   &SQBRCT_OP  &SQBRCT_CL     &kp GRAVE               &kp EXCL        &kp BSLH        &kp PIPE2   &kp RPAR    &kp CARET
+    &BKSLASH    &kp AMPS    &CRBRCT_OP  &CRBRCT_CL     &kp RBRC                &kp UNDER       &kp STAR        &kp LPAR    &kp FSLH    &kp GT
+    &kp BSLH    &kp DLLR    &PIIIPE     &TIIILDE       &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT      &kp PIPE    &kp LT
+    &none       &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC)  &AAAT                   &none           &none           &none       &none       &none 
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
@@ -279,3 +286,29 @@
 
 
 };
+
+
+// ┏ ┗ ┓ ┛ ┣ ┫ ┳ ┻ ╋ ━ ┃
+// ┌ └ ┐ ┘ ├ ┤ ┬ ┴ ┼ ─ │
+
+
+//     ┌───┬───┬───┬───┐
+// ┌───┤   │   │   │   │
+// │   ├───┼───┼───┼───┤
+// ├───┤   │   │   │   │
+// │   ├───┼───┼───┼───┤ ----
+// ├───┤   │   │   │   │|    |
+// │   ├───┴───┴───┴───┘ ----
+// └───┘---- ┌───┬───┬───┬───┐
+//     |    |│   │   │   │   │
+//      ---- └───┴───┴───┴───┘
+
+
+
+// ┌───┬───┬───┬───┬───┐
+// │   │   │   │   │   │
+// ├───┼───┼───┼───┼───┤
+// │   │   │   │   │   │
+// ├───┼───┼───┼───┼───┤
+// │   │   │   │   │   │
+// └───┴───┴───┴───┴───┘
