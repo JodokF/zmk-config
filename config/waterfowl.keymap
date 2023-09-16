@@ -109,8 +109,8 @@
                         ;
         };
         
-        TILDE: TILDE {
-                label = "TILDE";
+        TIIILDE: TIIILDE {
+                label = "TIIILDE";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -178,8 +178,8 @@
  */
             bindings = <
     &EURO           &kp QMARK   &SQBRCT_OP  &SQBRCT_CL &kp GRAVE               &kp EXCL        &kp BSLH        &kp PIPE2           &kp RPAR    &kp CARET
-    &BKSLASH           &kp AMPS    &CRBRCT_OP  &CRBRCT_CL &kp RBRC                   &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
-    &kp BSLH        &kp DLLR    &PIIIPE       &TILDE     &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT              &kp PIPE    &kp LT
+    &BKSLASH        &kp AMPS    &CRBRCT_OP  &CRBRCT_CL &kp RBRC                 &kp UNDER       &kp STAR        &kp LPAR            &kp FSLH    &kp GT
+    &kp BSLH        &kp DLLR    &PIIIPE     &TIIILDE   &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT              &kp PIPE    &kp LT
     &none           &kp LC(DEL) &kp LC(BSPC) &kp LC(BSPC) &none                 &none           &none           &none               &none       &none 
             >;
 
