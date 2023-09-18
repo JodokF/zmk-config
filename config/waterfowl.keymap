@@ -171,6 +171,17 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
                 bindings = <&kp>, <&kp>;
         };
 
+        lftslsk: left_symbol_layer_space_key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "left_symbol_layer_space_key";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <160>;
+            quick-tap-ms = <150>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
+
         pht: positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "POSITIONAL_HOLD_TAP";
@@ -239,7 +250,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     &kp ESC     &kp V           &kp L             &gqt LALT C     &kp W           &kp K   &kp H               &kp G               &kp F             &kp Z
     &lt FNCTS U &kp I           &kp A             &kp E           &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
     &kp LBKT    &kp SEMI        &kp APOS          &kp P           &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
-    &none       &mt LCTRL DEL   &lt NAV_NUM BSPC  &mt LSHFT TAB   &none           &none   &mt RSHFT ENTER     &lt SYMBOLS SPACE   &lt EXTRAS RGUI   &none
+    &none       &mt LCTRL DEL   &lt NAV_NUM BSPC  &lftslsk LSHFT TAB   &none           &none   &mt RSHFT ENTER     &lt SYMBOLS SPACE   &lt EXTRAS RGUI   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN &inc_dec_kp LEFT RIGHT>;
