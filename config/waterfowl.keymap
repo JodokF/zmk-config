@@ -176,8 +176,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             label = "layer_and_key";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <160>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -187,7 +187,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <160>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
 
