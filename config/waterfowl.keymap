@@ -261,7 +261,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     &kp A       &mak LCTRL DEL   &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&rEncoder>;
+            sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
         };
 
 
