@@ -131,6 +131,17 @@
                         ;
         };
 
+        EcsX: Escape_X {
+                label = "Escape_X";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LCTRL>
+                        , <&macro_tap &kp X>
+                        , <&macro_release &kp LCTRL>
+                        ;
+        };
+
 
     };
 };
@@ -195,7 +206,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             compatible = "zmk,behavior-mod-morph";
             label = "ESCAPE_X";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp X>;
+            bindings = <&kp ESC>, <&EcsX>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
@@ -261,7 +272,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     &kp A       &mak LCTRL DEL   &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&inc_dec_kp A A &inc_dec_kp A A>;
+            sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
 
