@@ -135,40 +135,19 @@
     };
 };
 
-/*
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LSFT_T(KC_TAB):
-            return TAPPING_TERM - 42;
-        case LALT_T(DE_C):
-            return TAPPING_TERM + 33;
-        case RALT_T(DE_H):
-            return TAPPING_TERM + 33;
-        case LSFT_T(DE_UDIA):
-            return TAPPING_TERM + 33;
-        case TD(X_GUI):
-            return TAPPING_TERM + 35;
-        case LT(_SYMBOLS,KC_SPC):
-            return TAPPING_TERM - 55;
-        default:
-            return TAPPING_TERM;
-    }
-}
 
-*/
-// tapping term:
 
 / {
     behaviors {
         kam: key_and_mod {
-                compatible = "zmk,behavior-hold-tap";
-                label = "key_and_mod";
-                #binding-cells = <2>;
-                flavor = "tap-preferred";
-                tapping-term-ms = <235>;
-                quick-tap-ms = <125>;
-                global-quick-tap;
-                bindings = <&kp>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            label = "key_and_mod";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <235>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
         };
 
         lak: layer_and_key {
@@ -199,21 +178,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
-/*
-        rEncoder: right_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "right_encoder";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        lEncoder: left_encoder {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "left_encoder";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
-        };
-*/
     };
 }; 
 
@@ -269,13 +233,14 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
  *          `-----'   `--------------------'            `--------------------'   `-----'
  */
             bindings = <
-    &escX     &kp V           &kam LCTRL L      &kam LALT C     &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
-    &lt FNCTS U &kp I           &kp A             &kp E           &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
- &kam LSHFT LBKT &kp SEMI        &kp APOS          &kp P          &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
-    &kp C_MUTE      &mak LCTRL DEL   &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
+    &escX           &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
+    &lt FNCTS U     &kp I           &kp A             &kp E          &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
+    &kam LSHFT LBKT &kp SEMI        &kp APOS          &kp P          &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
+    &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D>;
+            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D>; // A B C D is set for debug reasons
+
         };
 
 
