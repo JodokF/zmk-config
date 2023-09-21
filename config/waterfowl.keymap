@@ -131,17 +131,6 @@
                         ;
         };
 
-        EcsXKey: Escape_X_Key {
-                label = "Escape_X_Key";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                        = <&macro_press &kp LCTRL>
-                        , <&macro_tap &kp X>
-                        , <&macro_release &kp LCTRL>
-                        ;
-        };
-
 
     };
 };
@@ -191,7 +180,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             quick-tap-ms = <222>;
             bindings = <&mo>, <&kp>;
         };
-// raglhcare raglhcare raglhcare raglhcare raglhcare raglhcare
+
         mak: mod_and_key {
             compatible = "zmk,behavior-hold-tap";
             label = "mod_and_key";
@@ -272,7 +261,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     &kp C_MUTE      &mak LCTRL DEL   &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP &inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D &inc_dec_kp E F &inc_dec_kp G H>;
         };
 
 
