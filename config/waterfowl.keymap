@@ -131,8 +131,8 @@
                         ;
         };
 
-        EcsXKey: Escape_X {
-                label = "Escape_X";
+        EcsXKey: Escape_X_Key {
+                label = "Escape_X_Key";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -272,7 +272,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     &kp A       &mak LCTRL DEL   &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
 
