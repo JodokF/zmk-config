@@ -131,7 +131,7 @@
                         ;
         };
 
-        EcsX: Escape_X {
+        EcsXKey: Escape_X {
                 label = "Escape_X";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -206,7 +206,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             compatible = "zmk,behavior-mod-morph";
             label = "ESCAPE_X";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&EcsX>;
+            bindings = <&kp ESC>, <&EcsXKey>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
