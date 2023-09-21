@@ -199,7 +199,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
-
+/*
         rEncoder: right_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "right_encoder";
@@ -213,7 +213,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             #sensor-binding-cells = <0>;
             bindings = <&kp>, <&kp>;
         };
-
+*/
     };
 }; 
 
@@ -275,7 +275,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     &kp C_MUTE      &mak LCTRL DEL   &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&lEncoder A B &rEncoder C D>;
+            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D>;
         };
 
 
