@@ -186,12 +186,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             compatible = "zmk,behavior-hold-tap";
             label = "layer_and_key";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <175>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <222>;
             bindings = <&mo>, <&kp>;
         };
-
+// raglhcare raglhcare raglhcare raglhcare raglhcare raglhcare
         mak: mod_and_key {
             compatible = "zmk,behavior-hold-tap";
             label = "mod_and_key";
@@ -220,7 +220,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
     };
 };
-
 
 
 
