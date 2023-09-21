@@ -210,7 +210,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         lEncoder: left_encoder {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "left_encoder";
-            #sensor-binding-cells = <2>;
+            #sensor-binding-cells = <0>;
             bindings = <&kp>, <&kp>;
         };
 
