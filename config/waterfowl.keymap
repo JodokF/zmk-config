@@ -239,10 +239,9 @@
     &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D>; // A B C D is set for debug reasons
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C D>; // A B C D is set for debug reasons
 
         };
-
 
 
         SYMBOLS {
