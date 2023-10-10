@@ -30,123 +30,77 @@
 / {
     macros {
 
-        EURO: EURO {
-                label = "EURO";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        EURO: EURO { label = "EURO"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>
                         , <&macro_release &kp LALT>
                         ;
         };
         
-        SQBRCT_OP: SQBRCT_OP {
-                label = "SQBRCT_OP";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        SQBRCT_OP: SQBRCT_OP { label = "SQBRCT_OP"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N9 &kp KP_N1>
                         , <&macro_release &kp LALT>
                         ;
         };
         
-        SQBRCT_CL: SQBRCT_CL {
-                label = "SQBRCT_CL";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        SQBRCT_CL: SQBRCT_CL { label = "SQBRCT_CL"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N9 &kp KP_N3>
                         , <&macro_release &kp LALT>
                         ;
         };
 
-
-        
-        CRBRCT_OP: CRBRCT_OP {
-                label = "CRBRCT_OP";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        CRBRCT_OP: CRBRCT_OP { label = "CRBRCT_OP"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
                         , <&macro_release &kp LALT>
                         ;
         };
         
-        CRBRCT_CL: CRBRCT_CL {
-                label = "CRBRCT_CL";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        CRBRCT_CL: CRBRCT_CL { label = "CRBRCT_CL"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
                         , <&macro_release &kp LALT>
                         ;
         };
         
-        BKSLASH: BKSLASH {
-                label = "BKSLASH";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        BKSLASH: BKSLASH { label = "BKSLASH"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N9 &kp KP_N2>
                         , <&macro_release &kp LALT>
                         ;
         };
         
-        PIIIPE: PIIIPE {
-                label = "PIIIPE";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        PIIIPE: PIIIPE { label = "PIIIPE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
                         , <&macro_release &kp LALT>
                         ;
         };
         
-        TIIILDE: TIIILDE {
-                label = "TIIILDE";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        TIIILDE: TIIILDE { label = "TIIILDE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
                         , <&macro_release &kp LALT>
                         ;
         };
 
-        AAAT: AAAT {
-                label = "AAAT";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        AAAT: AAAT { label = "AAAT"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N6 &kp KP_N4>
                         , <&macro_release &kp LALT>
                         ;
         };
 
-        ENESML: ENESML {
-                label = "ENESML";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        ENESML: ENESML { label = "ENESML"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N4>
                         , <&macro_release &kp LALT>
                         ;
         };
 
-        ENEBIG: ENEBIG {
-                label = "ENEBIG";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
+        ENEBIG: ENEBIG { label = "ENEBIG"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N5>
                         , <&macro_release &kp LALT>
@@ -168,7 +122,7 @@
                         , <&macro_release &kp LALT>
                         ;
         };
-
+// MISSING Symbole codes: https://www.alt-codes.net/
 
     };
 };
@@ -268,7 +222,7 @@
     &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C D>;
 
         };
 
