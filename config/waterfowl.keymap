@@ -24,6 +24,7 @@
 #define   NAV_NUM       2
 #define   FNCTS         3
 #define   EXTRAS        4
+#define   BLUETOOTH     5
 
 
 
@@ -162,14 +163,23 @@
             bindings = <&kp>, <&kp>;
         };
 
-        escX: ESCAPE_X {
+        esc_ctrl_X: ESC_CTRL_X {
             compatible = "zmk,behavior-mod-morph";
-            label = "ESCAPE_X";
+            label = "ESC_CTRL_X";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp X>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
+
+        esc_X_TD: ESC_X_TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_X_TD";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&kp X>, <&kp ESC>;
+        };
+
     };
 }; 
 
@@ -180,20 +190,26 @@
         compatible = "zmk,combos";
                 combo_space {
                 timeout-ms = <50>;
-                key-positions = <12 13>;
+                key-positions = <12 13>; // A & E
                 bindings = <&kp SPACE>;
         };
 
         compatible = "zmk,combos";
                 combo_enter {
                 timeout-ms = <50>;
-                key-positions = <22 23>;
+                key-positions = <22 23>; // Ä & P
                 bindings = <&kp ENTER>;
         };
+        
+        compatible = "zmk,combos";
+                combo_enter {
+                timeout-ms = <50>;
+                key-positions = <25 18>; // B & T 
+                bindings = <&mo BLUETOOTH>; // ??? -> auf BLUETOOTH Layer gehen
+        };
+        
     };
 };
-
-
 
 
 
@@ -202,24 +218,25 @@
         compatible = "zmk,keymap";
 
         default_layer {
-/* QWERTY
- *
- * ,----------------------------------.                      ,----------------------------------.
- * |  ESC |   V  |   L  |   C  |   W  |                      |   Y  |   U  |   I  |   O  |   P  |
- * |------+------+------+------+------|                      |------+------+------+------+------|
- * |   A  |   S  |   D  |   F  |   G  |                      |   H  |   J  |   K  |   L  |   ;  |
- * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
- * |   Z  |   X  |   C  |   V  |   B  |  |  2  |    |  3  |  |   N  |   M  |   ,  |   .  |   /  |
- * `----------------------------------'  `-----'    `-----'  `----------------------------------'
- *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
- *          |  1  |   | DEL | SPACE | TAB  |            |  ESC  | BS | ENTER |   |  4  |
- *          `-----'   `--------------------'            `--------------------'   `-----'
+/* NEO
+ *                    ┌───┬───┬───┬───┐                        ┌───┬───┬───┬───┐
+ *                ┌───┤ V │ L │ C │ W │                        │ K │ H │ G │ F ├───┐
+ *                │ X ├───┼───┼───┼───┤                        ├───┼───┼───┼───┤ Y │
+ *                ├───┤ I │ A │ E │ O │                        │ S │ N │ R │ T ├───┤
+ *                │ U ├───┼───┼───┼───┤ ----              ---- ├───┼───┼───┼───┤ D │
+ *                ├───┤ Ö │ Ä │ P │ Z │|    |            |    |│ B │ M │ : │ . ├───┤
+ *                │ Ü ├───┴───┴───┴───┘ ----              ---- └───┴───┴───┴───┤ J │
+ *                └───┘ ----- ┌─────┬─────┬─────┐    ┌─────┬─────┬─────┐ ----- └───┘
+ *                TAP: |VOLUM|│ DEL │BCKSP│ TAB │    │ENTER│SPACE│ GUI ││     │
+ *              PRESS: |MUTE |│ CTRL│NAVNM│SHIFT│    │SHIFT│SYMBL│EXTRS││     │
+ *                      ----- └─────┴─────┴─────┘    └─────┴─────┴─────┘ -----
  */
+
             bindings = <
-    &escX           &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
+    &esc_X_TD       &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
     &lt FNCTS U     &kp I           &kp A             &kp E          &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
     &kam LSHFT LBKT &kp SEMI        &kp APOS          &kp P          &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
-    &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE &lak EXTRAS RGUI   &kp A
+    &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS RGUI   &kp A
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C D>;
@@ -298,7 +315,7 @@
     &none           &none           &none           &none           &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F10
     &none           &none           &none           &none           &none               &none       &kp F4  &kp F5      &kp F6      &kp F11
     &none           &none           &none           &none           &none               &kp F13     &kp F1  &kp F2      &kp F3      &kp F12
-    &trans          &trans           &trans           &trans        &trans              &trans      &trans  &trans      &trans      &trans 
+    &trans          &trans          &trans          &trans          &trans              &trans      &trans  &trans      &trans      &trans 
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
@@ -307,7 +324,7 @@
 
 
         EXTRAS {
-/* EX≠Ña¿
+/* EXTRAS: 
 *                    ┌───┬───┬───┬───┐                            ┌───┬───┬───┬───┐           
 *                ┌───┤   │   │   │   │                            │   │   │   │   ├───┐
 *                │   ├───┼───┼───┼───┤                            ├───┼───┼───┼───┤   │
@@ -315,15 +332,39 @@
 *                │   ├───┼───┼───┼───┤ ----                  ---- ├───┼───┼───┼───┤   │
 *                ├───┤   │   │   │   │|    |                |    |│   │   │   │   ├───┤
 *                │   ├───┴───┴───┴───┘ ----                  ---- └───┴───┴───┴───┤   │
-*                └───┘---- ┌───┬───┬───┬───┐                ┌───┬───┬───┬───┐ ----└───┘
-*                    |    |│   │   │   │   │                |   |   │   │   ││    │
-*                     ---- └───┴───┴───┴───┘                └───┴───┴───┴───┘ ----
+*                └───┘   ---- ┌───┬───┬───┐                  ┌───┬───┬───┐ ----   └───┘
+*                       |    |│   │   │   │                  |   |   │   ││    │
+*                        ---- └───┴───┴───┘                  └───┴───┴───┘ ----
 */
             bindings = <
     &none           &none           &none           &none           &none               &EXMKUSD    &none       &none       &none       &none
-    &kp X           &none           &none           &none           &none               &QMKUSD     &ENESML     &ENEBIG     &none       &kp Q
+    &none           &none           &none           &none           &none               &QMKUSD     &ENESML     &ENEBIG     &none       &kp Q
     &none           &none           &none           &none           &none               &none       &none       &none       &none       &kp MINUS // MINUS = ß
     &trans          &trans          &trans          &trans          &trans              &trans      &trans      &trans      &trans      &trans 
+            >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
+        };
+
+    
+            BLUETOOTH {
+/* BLUETOOTH
+*                    ┌───┬───┬───┬───┐                            ┌───┬───┬───┬───┐           
+*                ┌───┤   │   │   │   │                            │   │   │   │   ├───┐
+*                │   ├───┼───┼───┼───┤                            ├───┼───┼───┼───┤   │
+*                ├───┤   │   │   │   │                            │   │   │   │   ├───┤
+*                │   ├───┼───┼───┼───┤ ----                  ---- ├───┼───┼───┼───┤   │
+*                ├───┤   │   │   │   │|    |                |    |│   │   │   │   ├───┤
+*                │   ├───┴───┴───┴───┘ ----                  ---- └───┴───┴───┴───┤   │
+*                └───┘   ---- ┌────┬────┬────┐            ┌────┬────┬────┐ ----   └───┘
+*                       |    |│    │    │    │            │    │    │    ││    │
+*                        ---- └────┴────┴────┘            └────┴────┴────┘ ----
+*/
+            bindings = <
+    &none           &none           &none           &none           &none               &none    &none        &none        &none        &none
+    &bt BT_CLR      &bt BT_DISC     &bt BT_PRV      &bt BT_NXT      &none               &none    &bt BT_SEL 5 &bt BT_SEL 4 &none        &none
+    &none           &none           &none           &none           &none               &none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none 
+    &trans          &trans          &trans          &trans          &trans              &trans   &trans       &trans       &trans       &trans 
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp TAB LS(TAB)>;
@@ -342,7 +383,23 @@
 // ┌ └ ┐ ┘ ├ ┤ ┬ ┴ ┼ ─ │
 
 
-/* TEMPLATE:
+/* TEMPLATE: (big keys)
+ *                     ┌────┬────┬────┬────┐                       ┌────┬────┬────┬────┐
+ *                ┌────┤    │    │    │    │                       │    │    │    │    ├────┐
+ *                │    ├────┼────┼────┼────┤                       ├────┼────┼────┼────┤    │
+ *                ├────┤    │    │    │    │                       │    │    │    │    ├────┤
+ *                │    ├────┼────┼────┼────┤ -----            ---- ├────┼────┼────┼────┤    │
+ *                ├────┤    │    │    │    │|     |          |    |│    │    │    │    ├────┤
+ *                │    ├────┴────┴────┴────┘ -----            ---- └────┴────┴────┴────┤    │
+ *                └────┘     ----- ┌─────┬─────┬─────┐    ┌─────┬─────┬─────┐ -----    └────┘
+ *                          |     |│     │     │     │    │     │     │     ││     │
+ *                           ----- └─────┴─────┴─────┘    └─────┴─────┴─────┘ -----
+ */
+
+
+
+
+/* small keys
 *                    ┌───┬───┬───┬───┐                            ┌───┬───┬───┬───┐           
 *                ┌───┤   │   │   │   │                            │   │   │   │   ├───┐
 *                │   ├───┼───┼───┼───┤                            ├───┼───┼───┼───┤   │
@@ -350,9 +407,9 @@
 *                │   ├───┼───┼───┼───┤ ----                  ---- ├───┼───┼───┼───┤   │
 *                ├───┤   │   │   │   │|    |                |    |│   │   │   │   ├───┤
 *                │   ├───┴───┴───┴───┘ ----                  ---- └───┴───┴───┴───┤   │
-*                └───┘---- ┌───┬───┬───┬───┐                ┌───┬───┬───┬───┐ ----└───┘
-*                    |    |│   │   │   │   │                |   |   │   │   ││    │
-*                     ---- └───┴───┴───┴───┘                └───┴───┴───┴───┘ ----
+*                └───┘   ---- ┌────┬────┬────┐            ┌────┬────┬────┐ ----   └───┘
+*                       |    |│    │    │    │            │    │    │    ││    │
+*                        ---- └────┴────┴────┘            └────┴────┴────┘ ----
 */
 
 
