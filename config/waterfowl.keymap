@@ -33,7 +33,6 @@
 
 / {
     macros {
-
         EURO: EURO { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>
@@ -41,11 +40,115 @@
                         ;
         };
         
+        SQBRCT_OP: SQBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N9 &kp KP_N1>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+        
+        SQBRCT_CL: SQBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N9 &kp KP_N3>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
+        CRBRCT_OP: CRBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+        
+        CRBRCT_CL: CRBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+        
+        BKSLASH: BKSLASH { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N9 &kp KP_N2>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+        
+        PIIIPE: PIIIPE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+        
+        TIIILDE: TIIILDE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
+        AAAT: AAAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N6 &kp KP_N4>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
+        ENESML: ENESML { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N4>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
+        ENEBIG: ENEBIG { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N5>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
+        QMKUSD: QMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N8>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
+        EXMKUSD: EXMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp KP_N1 &kp KP_N7 &kp KP_N3>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+// MISSING Symbole codes: https://www.alt-codes.net/
     };
 };
 
 / {
     behaviors {
+        kam: key_and_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <235>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+        lak: layer_and_key {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <222>;
+            bindings = <&mo>, <&kp>;
+        };
+
         mak: mod_and_key {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
