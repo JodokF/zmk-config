@@ -23,10 +23,10 @@
 #define   SYMBOLS       1
 #define   NAV_NUM       2
 #define   FNCTS         3
-// #define   EXTRAS        4
-// #define   BLUETOOTH     5
+#define   EXTRAS        4
+#define   BLUETOOTH     5
 
-/*
+
 / {
     macros {
 
@@ -126,9 +126,9 @@
 
     };
 };
-*/
 
-/*
+
+
 / {
     behaviors {
         kam: key_and_mod {
@@ -175,10 +175,10 @@
 
     };
 }; 
-*/
 
 
-/*
+
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -204,7 +204,7 @@
         
     };
 };
-*/
+
 
 
 
@@ -231,8 +231,8 @@
     &none       &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
     &lt FNCTS U     &kp I           &kp A             &kp E          &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
     &kam LSHFT LBKT &kp SEMI        &kp APOS          &kp P          &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
-    // &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS RGUI   &kp A
-       &none           &none           &none             &none          &none           &none   &none               &none               &none              &none
+    &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS RGUI   &kp A
+    //   &none           &none           &none             &none          &none           &none   &none               &none               &none              &none
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C D>;
@@ -336,7 +336,7 @@
             >;
         };
 
-/*
+
 
         EXTRAS {
 /* EXTRAS: 
@@ -393,10 +393,9 @@
                 &inc_dec_kp LEFT RIGHT
             >;
         };
-*/
+
     
     };
-
 
 
 };
