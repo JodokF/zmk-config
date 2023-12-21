@@ -23,10 +23,10 @@
 #define   SYMBOLS       1
 #define   NAV_NUM       2
 #define   FNCTS         3
-#define   EXTRAS        4
-#define   BLUETOOTH     5
+// #define   EXTRAS        4
+// #define   BLUETOOTH     5
 
-
+/*
 / {
     macros {
 
@@ -126,7 +126,7 @@
 
     };
 };
-
+*/
 
 /*
 / {
@@ -178,7 +178,7 @@
 */
 
 
-
+/*
 / {
     combos {
         compatible = "zmk,combos";
@@ -204,6 +204,7 @@
         
     };
 };
+*/
 
 
 
@@ -335,7 +336,7 @@
             >;
         };
 
-
+/*
 
         EXTRAS {
 /* EXTRAS: 
@@ -392,10 +393,9 @@
                 &inc_dec_kp LEFT RIGHT
             >;
         };
-
+*/
+    
     };
-
-
 
 
 
