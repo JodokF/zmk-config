@@ -26,21 +26,6 @@
 #define   EXTRAS        4
 #define   BLUETOOTH     5
 
-/ {
-    macros {
-        zed_em_kay: zed_em_kay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
-    };
-};
-
-
 
 / {
     macros {
@@ -159,7 +144,6 @@
         lak: layer_and_key {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
             tapping-term-ms = <150>;
             quick-tap-ms = <222>;
             bindings = <&mo>, <&kp>;
@@ -174,17 +158,17 @@
             bindings = <&kp>, <&kp>;
         };
 
-        esc_ctrl_X: ESC_CTRL_X {
+        /*esc_ctrl_X: ESC_CTRL_X {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp X>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL)>;
-        };
+        };*/
 
         esc_X_TD: ESC_X_TD {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp X>, <&kp ESC>;
         };
