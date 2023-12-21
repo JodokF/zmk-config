@@ -184,7 +184,7 @@
 
         esc_X_TD: ESC_X_TD {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <175>;
             bindings = <&kp X>, <&kp ESC>;
         };
