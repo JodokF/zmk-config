@@ -128,7 +128,7 @@
 };
 
 
-
+/*
 / {
     behaviors {
         kam: key_and_mod {
@@ -164,7 +164,7 @@
             bindings = <&kp ESC>, <&kp X>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL)>;
-        };*/
+        };
 
         esc_X_TD: ESC_X_TD {
             compatible = "zmk,behavior-tap-dance";
@@ -175,6 +175,7 @@
 
     };
 }; 
+*/
 
 
 
@@ -226,10 +227,11 @@
  */
 
             bindings = <
-    &esc_X_TD       &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
+    &none       &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
     &lt FNCTS U     &kp I           &kp A             &kp E          &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
     &kam LSHFT LBKT &kp SEMI        &kp APOS          &kp P          &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
-    &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS RGUI   &kp A
+    // &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS RGUI   &kp A
+       &none           &none           &none             &none          &none           &none   &none               &none               &none              &none
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C D>;
