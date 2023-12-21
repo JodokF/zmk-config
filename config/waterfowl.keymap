@@ -158,13 +158,13 @@
             bindings = <&kp>, <&kp>;
         };
 
-        /*esc_ctrl_X: ESC_CTRL_X {
+        esc_ctrl_X: ESC_CTRL_X {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp X>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL)>;
-        };*/
+        };
 
         esc_X_TD: ESC_X_TD {
             compatible = "zmk,behavior-tap-dance";
