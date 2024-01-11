@@ -152,17 +152,27 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <160>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
 
-        /*esc_ctrl_X: ESC_CTRL_X {
+        /* this shit is so ESC actsl like X when CTRL is pressed
+        esc_ctrl_X: ESC_CTRL_X {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp X>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };*/
+
+        xEsc: x_and_esc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <222>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
 
         esc_X_TD: ESC_X_TD {
             compatible = "zmk,behavior-tap-dance";
@@ -223,7 +233,7 @@
             */
 
             bindings = <
-                &esc_X_TD       &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
+                &xEsc X ESC     &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K   &kam RALT H         &kam RCTRL G        &kp F             &kp Z
                 &lt FNCTS U     &kp I           &kp A             &kp E          &kp O           &kp S   &kp N               &kp R               &kp T             &lt FNCTS D
                 &kam LSHFT LBKT &kp SEMI        &kp APOS          &kp P          &kp Y           &kp B   &kp M               &kp COMMA           &kp DOT           &kp J
                 &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none   &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS RGUI   &kp A
