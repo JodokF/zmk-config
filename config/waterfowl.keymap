@@ -96,9 +96,10 @@
         LNXAT: LNXAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
-                        , <&macro_tap &kp U &kp KP_N0 &kp KP_N0 &kp KP_N4 &kp KP_N0>
+                        , <&macro_tap &kp U>
                         , <&macro_release &kp LCTRL>
                         , <&macro_release &kp LSHFT>
+                        , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N4 &kp KP_N0 &kp SPACE>
                         ;
         };
 
