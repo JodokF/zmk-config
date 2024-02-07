@@ -235,9 +235,9 @@
 
             bindings = <
                 &xEsc ESC X     &kp V           &kam LCTRL L      &kam LALT C    &kp W           &kp K       &kam RALT H         &kam RCTRL G        &kp F             &kp Z
-                &lt FNCTS U     &kp I           &kp A             &kp E          &kam LGUI O     &kam RGUI S &kp N               &kp R               &kp T             &lt FNCTS D
+                &lt FNCTS U     &kp I           &kp A             &kp E          &kam LGUI O     &kam LGUI S &kp N               &kp R               &kp T             &lt FNCTS D
                 &kam LSHFT LBKT &kp SEMI        &kp APOS          &kp P          &kp Y           &kp B       &kp M               &kp COMMA           &kp DOT           &kp J
-                &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none       &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS RGUI   &kp A
+                &kp C_MUTE      &mak LCTRL DEL  &lak NAV_NUM BSPC &mak LSHFT TAB &none           &none       &mak RSHFT ENTER    &lak SYMBOLS SPACE  &lak EXTRAS LGUI   &kp A
             >;
 
             sensor-bindings = <
@@ -364,7 +364,7 @@
             bindings = <
                 &none           &none           &kp LBKT        &kp RBKT        &none               &EXMKUSD    &none       &none       &none       &none
                 &none           &none           &kp LBRC        &kp RBRC        &none               &QMKUSD     &ENESML     &ENEBIG     &none       &kp Q
-                &none           &none           &none           &none           &kp GRAVE           &none       &none       &none       &none       &kp MINUS // MINUS = ß
+                &none           &none           &none           &kp AT          &kp GRAVE           &none       &none       &none       &none       &kp MINUS // MINUS = ß
                 &trans          &trans          &trans          &trans          &kp AT              &trans      &trans      &trans      &trans      &trans 
             >;
 
