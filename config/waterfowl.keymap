@@ -86,6 +86,18 @@
                         ;
         };
 
+        LNXBCTK: LNXBCTK { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+                        = <&macro_wait_time 5>     // 10 ms works
+                        , <&macro_tap_time 10>      // 20 ms works 
+                        , <&macro_press &kp LSHFT>
+                        , <&macro_press &kp LCTRL>
+                        , <&macro_tap &kp U>
+                        , <&macro_release &kp LCTRL>
+                        , <&macro_release &kp LSHFT>
+                        , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N6 &kp KP_N0 &kp SPACE>
+                        ;
+        };
+
         AAAT: AAAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_press &kp LALT>
                         , <&macro_tap &kp KP_N6 &kp KP_N4>
@@ -94,8 +106,8 @@
         };
 
         LNXAT: LNXAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 10>     // 15 ms works
-                        , <&macro_tap_time 20>      // 30 ms works
+                        = <&macro_wait_time 5>     // 10 ms works
+                        , <&macro_tap_time 10>      // 20 ms works 
                         , <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
                         , <&macro_tap &kp U>
@@ -281,7 +293,7 @@
                 &EURO       &kp QMARK   &SQBRCT_OP  &SQBRCT_CL     &kp GRAVE               &kp EXCL        &kp NUBS        &kp PIPE2   &kp RPAR    &kp CARET
                 &BKSLASH    &kp AMPS    &CRBRCT_OP  &CRBRCT_CL     &kp RBRC                &kp UNDER       &kp STAR        &kp LPAR    &kp FSLH    &kp GT
                 &kp BSLH    &kp DLLR    &PIIIPE     &TIIILDE       &kp EQUAL               &kp RBKT        &kp PRCNT       &kp AT      &kp PIPE    &kp LT
-                &none       &kp LC(DEL) &kp LC(BSPC) &kp AT         &trans                  &trans          &trans         &trans       &trans       &none 
+                &none       &kp LC(DEL) &kp LC(BSPC) &LNXAT        &trans                  &trans          &trans         &trans       &trans       &none 
             >;
             
             sensor-bindings = <
@@ -376,7 +388,7 @@
             bindings = <
                 &none           &none           &kp LBKT        &kp RBKT        &none               &EXMKUSD    &none       &none       &none       &none
                 &none           &none           &kp LBRC        &kp RBRC        &none               &QMKUSD     &ENESML     &ENEBIG     &none       &kp Q
-                &none           &none           &none           &LNXAT          &kp GRAVE           &none       &none       &none       &none       &kp MINUS // MINUS = ß
+                &none           &none           &none           &LNXAT          &LNXBCTK            &none       &none       &none       &none       &kp MINUS // MINUS = ß
                 &trans          &trans          &trans          &LNXAT          &none               &trans      &trans      &trans      &trans      &trans 
             >;
 
