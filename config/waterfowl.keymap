@@ -87,8 +87,8 @@
         };
 
         LNXBCTK: LNXBCTK { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 5>     // 10 ms works
-                        , <&macro_tap_time 10>      // 20 ms works 
+                        = <&macro_wait_time 15>     // 5 ms works
+                        , <&macro_tap_time 30>      // 10 ms works (only in vscode) @@
                         , <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
                         , <&macro_tap &kp U>
@@ -106,8 +106,8 @@
         };
 
         LNXAT: LNXAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 5>     // 10 ms works
-                        , <&macro_tap_time 10>      // 20 ms works 
+                        = <&macro_wait_time 5>     // 5 ms works
+                        , <&macro_tap_time 10>      // 10 ms works 
                         , <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
                         , <&macro_tap &kp U>
