@@ -94,7 +94,7 @@
                         , <&macro_tap &kp U>
                         , <&macro_release &kp LCTRL>
                         , <&macro_release &kp LSHFT>
-                        , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N6 &kp KP_N0 &kp SPACE>
+                        , <&macro_tap &kp N0 &kp N0 &kp N6 &kp N0 &kp SPACE>
                         ;
         };
 
@@ -106,8 +106,8 @@
         };
 
         LNXAT: LNXAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 200>     // 5 ms works
-                        , <&macro_tap_time 250>      // 10 ms works @
+                        = <&macro_wait_time 5>     // 5 ms works
+                        , <&macro_tap_time 10>      // 10 ms works @
                         , <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
                         , <&macro_tap &kp U>
@@ -353,9 +353,9 @@
             *          |  1  |   | DEL | SPACE | TAB  |            |  ESC  | BS | ENTER |   |  4  |
             *          `-----'   `--------------------'            `--------------------'   `-----'
             */
-                        
+                    
             bindings = <
-                &kp KP_N1       &none           &none           &none           &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F10
+                &none           &none           &none           &none           &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F10
                 &none           &none           &none           &none           &none               &none       &kp F4  &kp F5      &kp F6      &kp F11
                 &none           &none           &none           &none           &none               &kp F13     &kp F1  &kp F2      &kp F3      &kp F12
                 &trans          &trans          &trans          &trans          &trans              &trans      &trans  &trans      &trans      &trans 
