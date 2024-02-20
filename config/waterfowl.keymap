@@ -106,8 +106,8 @@
         };
 
         LNXAT: LNXAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 45>     // 5 ms works
-                        , <&macro_tap_time 60>      // 10 ms works 
+                        = <&macro_wait_time 200>     // 5 ms works
+                        , <&macro_tap_time 250>      // 10 ms works 
                         , <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
                         , <&macro_tap &kp U>
