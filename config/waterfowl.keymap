@@ -107,13 +107,13 @@
 
         LNXAT: LNXAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
                         = <&macro_wait_time 200>     // 5 ms works
-                        , <&macro_tap_time 250>      // 10 ms works 
+                        , <&macro_tap_time 250>      // 10 ms works @
                         , <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
                         , <&macro_tap &kp U>
                         , <&macro_release &kp LCTRL>
                         , <&macro_release &kp LSHFT>
-                        , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N4 &kp KP_N0 &kp SPACE>
+                        , <&macro_tap &kp N0 &kp N0 &kp N4 &kp N0 &kp SPACE>
                         ;
         };
 
@@ -355,7 +355,7 @@
             */
                         
             bindings = <
-                &none           &none           &none           &none           &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F10
+                &KP_NO          &none           &none           &none           &sys_reset          &sys_reset  &kp F7  &kp F8      &kp F9      &kp F10
                 &none           &none           &none           &none           &none               &none       &kp F4  &kp F5      &kp F6      &kp F11
                 &none           &none           &none           &none           &none               &kp F13     &kp F1  &kp F2      &kp F3      &kp F12
                 &trans          &trans          &trans          &trans          &trans              &trans      &trans  &trans      &trans      &trans 
