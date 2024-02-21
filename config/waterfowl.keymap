@@ -61,8 +61,8 @@
         };
 
         EURO: EURO { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp N2 &kp N0 &kp A &kp C &kp SPACE>
+                        //= <&macro_tap &UNI_U>
+                        = <&macro_tap &kp N2 &kp N0 &kp A &kp C &kp SPACE>
                         ;
         };
         
