@@ -48,14 +48,8 @@
                         ;
         };
 
-        LNXBCTK: LNXBCTK { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 5>     // 5 ms works
-                        , <&macro_tap_time 10>      // 10 ms works 
-                        , <&macro_press &kp LSHFT>
-                        , <&macro_press &kp LCTRL>
-                        , <&macro_tap &kp U>
-                        , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp LSHFT>
+        BCTK: BCTK { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp N0 &kp N0 &kp N6 &kp N0 &kp SPACE>
                         ;
         };
@@ -66,94 +60,75 @@
                         ;
         };
         
-        SQBRCT_OP: SQBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        SQBRCT_OP: SQBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N9 &kp KP_N1>
-                        , <&macro_release &kp LALT>
                         ;
         };
         
-        SQBRCT_CL: SQBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        SQBRCT_CL: SQBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N9 &kp KP_N3>
-                        , <&macro_release &kp LALT>
                         ;
         };
 
-        CRBRCT_OP: CRBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        CRBRCT_OP: CRBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
-                        , <&macro_release &kp LALT>
                         ;
         };
         
-        CRBRCT_CL: CRBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        CRBRCT_CL: CRBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
-                        , <&macro_release &kp LALT>
                         ;
         };
         
-        BKSLASH: BKSLASH { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        BKSLASH: BKSLASH { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N9 &kp KP_N2>
-                        , <&macro_release &kp LALT>
                         ;
         };
         
-        PIIIPE: PIIIPE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        PIIIPE: PIIIPE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
-                        , <&macro_release &kp LALT>
                         ;
         };
         
-        TIIILDE: TIIILDE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        TIIILDE: TIIILDE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
-                        , <&macro_release &kp LALT>
                         ;
         };
 
-        AAAAT: AAAAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 5>     // 5 ms works
-                        , <&macro_tap_time 10>      // 10 ms works @
-                        , <&macro_press &kp LSHFT>
-                        , <&macro_press &kp LCTRL>
-                        , <&macro_tap &kp U>
-                        , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp LSHFT>
+        AAAAT: AAAAT { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp N0 &kp N0 &kp N4 &kp N0 &kp SPACE>
                         ;
         };
 
-        ENESML: ENESML { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        ENESML: ENESML { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N4>
-                        , <&macro_release &kp LALT>
                         ;
         };
 
-        ENEBIG: ENEBIG { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_press &kp LALT>
+        ENEBIG: ENEBIG { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N5>
-                        , <&macro_release &kp LALT>
                         ;
         };
 
-        QMKUSD: QMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>;
-                bindings
-                        = <&macro_press &kp LALT>
+        QMKUSD: QMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N8>
-                        , <&macro_release &kp LALT>
                         ;
         };
 
-        EXMKUSD: EXMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>;
-                bindings
-                        = <&macro_press &kp LALT>
+        EXMKUSD: EXMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        = <&macro_tap &UNI_U>
                         , <&macro_tap &kp KP_N1 &kp KP_N7 &kp KP_N3>
-                        , <&macro_release &kp LALT>
                         ;
         };
 // MISSING Symbole codes: https://www.alt-codes.net/
@@ -401,7 +376,7 @@
             bindings = <
                 &none           &none           &kp LBKT        &kp RBKT        &none               &EXMKUSD    &none       &none       &none       &none
                 &none           &none           &kp LBRC        &kp RBRC        &none               &QMKUSD     &ENESML     &ENEBIG     &none       &kp Q
-                &none           &none           &none           &none           &LNXBCTK            &none       &none       &none       &none       &kp MINUS // MINUS = ß
+                &none           &none           &none           &none           &BCTK               &none       &none       &none       &none       &kp MINUS // MINUS = ß
                 &trans          &trans          &trans          &trans          &none               &trans      &trans      &trans      &trans      &trans 
             >;
 
