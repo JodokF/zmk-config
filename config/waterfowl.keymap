@@ -61,7 +61,7 @@
         };
 
         EURO: EURO { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        //= <&macro_tap &UNI_U>
+                        = <&macro_tap &UNI_U>
                         = <&macro_tap &kp N2 &kp N0 &kp A &kp C &kp SPACE>
                         ;
         };
@@ -401,8 +401,8 @@
             bindings = <
                 &none           &none           &kp LBKT        &kp RBKT        &none               &EXMKUSD    &none       &none       &none       &none
                 &none           &none           &kp LBRC        &kp RBRC        &none               &QMKUSD     &ENESML     &ENEBIG     &none       &kp Q
-                &none           &none           &none           &LNXAT          &LNXBCTK            &none       &none       &none       &none       &kp MINUS // MINUS = ß
-                &trans          &trans          &trans          &LNXAT          &none               &trans      &trans      &trans      &trans      &trans 
+                &none           &none           &none           &none           &LNXBCTK            &none       &none       &none       &none       &kp MINUS // MINUS = ß
+                &trans          &trans          &trans          &trans          &none               &trans      &trans      &trans      &trans      &trans 
             >;
 
             sensor-bindings = <

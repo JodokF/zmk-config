@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "*.keymap": "cpp"
+        "*.keymap": "cpp",
+        "bitset": "cpp"
     },
     "python.autoComplete.extraPaths": [
         "/home/jodok/Documents/catkin_ws_tfm/devel/lib/python3/dist-packages",
