@@ -1,0 +1,63 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/jodok/Documents/catkin_ws_tfm/devel/include/**",
+        "/home/jodok/Documents/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/eigen_checks/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_gazebo/hector_gazebo_plugins/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_gazebo/hector_gazebo_thermal_camera/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_moveit_exploration/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_localization/hector_pose_estimation/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_localization/hector_pose_estimation_core/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_quadrotor/hector_quadrotor_actions/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_quadrotor/hector_quadrotor_controller_gazebo/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_quadrotor/hector_quadrotor_interface/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_quadrotor/hector_quadrotor_model/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_quadrotor/hector_quadrotor_pose_estimation/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/hector_quadrotor/hector_uav_msgs/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/loco_planner/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/mav_local_planner/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_comm/mav_msgs/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/mav_path_smoothing/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/mav_planning_benchmark/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/mav_planning_common/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_comm/mav_planning_msgs/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/mav_planning_rviz/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_trajectory_generation/mav_trajectory_generation/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_trajectory_generation/mav_trajectory_generation_example/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_trajectory_generation/mav_trajectory_generation_ros/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_trajectory_generation/mav_visualization/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/minkindr/minkindr/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/minkindr_ros/minkindr_conversions/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/nlopt/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/numpy_eigen/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/optitrack_arena/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/px4_tyrion/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/tyrion_voxblox_global_planning/include/**",
+        "/home/jodok/Documents/catkin_ws/src/Dwa3D/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/voxblox/voxblox/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/voxblox_loco_planner/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/voxblox_planning_common/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/voxblox/voxblox_ros/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/voxblox_rrt_planner/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/voxblox/voxblox_rviz_plugin/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/voxblox_skeleton/include/**",
+        "/home/jodok/Documents/catkin_ws_tfm/src/voxblox/mav_voxblox_planning/voxblox_skeleton_planner/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
