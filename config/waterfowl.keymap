@@ -62,43 +62,43 @@
         
         SQBRCT_OP: SQBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N9 &kp KP_N1>
+                        , <&macro_tap &kp N0 &kp N0 &kp N5 &kp B &kp SPACE>
                         ;
         };
         
         SQBRCT_CL: SQBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N9 &kp KP_N3>
+                        , <&macro_tap &kp N0 &kp N0 &kp N5 &kp D &kp SPACE>
                         ;
         };
 
         CRBRCT_OP: CRBRCT_OP { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N3>
+                        , <&macro_tap &kp N0 &kp N0 &kp N7 &kp B &kp SPACE>
                         ;
         };
         
         CRBRCT_CL: CRBRCT_CL { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N5>
+                        , <&macro_tap &kp N0 &kp N0 &kp N7 &kp D &kp SPACE>
                         ;
         };
-        
+    
         BKSLASH: BKSLASH { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N9 &kp KP_N2>
+                        , <&macro_tap &kp N0 &kp N0 &kp N5 &kp C &kp SPACE>
                         ;
         };
         
         PIIIPE: PIIIPE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N4>
+                        , <&macro_tap &kp N0 &kp N0 &kp N7 &kp C &kp SPACE>
                         ;
         };
         
         TIIILDE: TIIILDE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
+                        , <&macro_tap &kp N0 &kp N0 &kp N7 &kp E &kp SPACE>
                         ;
         };
 
@@ -110,28 +110,27 @@
 
         ENESML: ENESML { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N4>
+                        , <&macro_tap &kp N0 &kp N0 &kp F &kp N1 &kp SPACE>
                         ;
         };
 
         ENEBIG: ENEBIG { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N5>
+                        , <&macro_tap &kp N0 &kp N0 &kp D &kp N1 &kp SPACE>
                         ;
         };
 
         QMKUSD: QMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N8>
+                        , <&macro_tap &kp N0 &kp N0 &kp B &kp F &kp SPACE>
                         ;
         };
 
         EXMKUSD: EXMKUSD { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
-                        , <&macro_tap &kp KP_N1 &kp KP_N7 &kp KP_N3>
+                        , <&macro_tap &kp N0 &kp N0 &kp A &kp N1 &kp SPACE>
                         ;
         };
-// MISSING Symbole codes: https://www.alt-codes.net/
     };
 };
 
@@ -259,7 +258,8 @@
 
 // x _ x x ^ ! < > = &
 // x / x x * ? ( ) - :
-// # $ x x ´ + % " ' ;
+// # $ x x ´ + % " ' ; 
+// € _
 
         SYMBOLS 
         {
