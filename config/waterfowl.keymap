@@ -37,10 +37,10 @@
 / {
     macros {
         
-        UNI_U: UNI_U { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
-                        = <&macro_wait_time 5>     // 5 ms works
-                        , <&macro_tap_time 10>      // 10 ms works 
-                        , <&macro_press &kp LSHFT>
+        UNI_U: UNI_U { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
+                        //= <&macro_wait_time 5>     // 5 ms works
+                        //, <&macro_tap_time 10>      // 10 ms works 
+                        = <&macro_press &kp LSHFT>
                         , <&macro_press &kp LCTRL>
                         , <&macro_tap &kp U>
                         , <&macro_release &kp LCTRL>
@@ -60,7 +60,7 @@
                         ;
         };
 
-        EURO: EURO { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings
+        EURO: EURO { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings
                         = <&macro_tap &UNI_U>
                         , <&macro_tap &kp N2 &kp N0 &kp A &kp C &kp SPACE>
                         ;
